@@ -17,6 +17,7 @@ countAnimals("dog,dog,cat",["pig","cow"]); //=> [0,0]*/
         return res;
     }
 
+//--------    console.log(countAnimals("dog,dog,cat",["dog","cat"]))
 
 /*Task
 Coding in function findSimilarity. function accept two parameters:
@@ -47,7 +48,6 @@ function findSimilarity(str,word){
         .filter((x) => reg1.test(x))
         .join(" ")
 }
-
 
 
 console.log(findSimilarity("bag dog dig dot doog dogs","dog"))
