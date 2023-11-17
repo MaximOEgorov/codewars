@@ -67,7 +67,28 @@ regex.test("900000000") should return true
 regex.test("91230000") should return true
 regex.test("-91230000") should return true*/
 
-var regex=/^[-9].{0,}0000$/
+var regex_=/^[-9].{0,}0000$/
 
-console.log(regex.test("-90000"))
+//console.log(regex.test("-90000"))
 
+/*Task
+This time you need to write a regular expression that matches all URL contained in the string.
+The rules:
+
+URL start with http:// or https://
+URL end with .com or .net
+The middle part of URL can use letters, numbers and dots
+Need to ignore case, and a string may contain multiple URLs
+Your regular expression name should be regex and your result should be a string array.
+    Examples
+"http://codewars.com".match(regex)
+should return [ 'http://codewars.com' ]
+"http://www.codewars.com".match(regex)
+should return [ 'http://www.codewars.com' ]
+"HTTP://CODEWARS.COM".match(regex)
+should return [ 'HTTP://CODEWARS.COM' ]
+"https://www.codewars.com".match(regex)
+should return [ 'https://www.codewars.com' ]
+"http://www.codewars.net".match(regex)*/
+
+var regex_=/^[-9].{0,}0000$/
