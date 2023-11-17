@@ -50,5 +50,24 @@ function findSimilarity(str,word){
 }
 
 
-console.log(findSimilarity("bag dog dig dot doog dogs","dog"))
+// console.log(findSimilarity("bag dog dig dot doog dogs","dog"))
+
+/*Task
+This time you do not need coding in function. You just need to write a regular expression that matches the specified numeric string. I've given the regular expression name: "regex", please don't modify the name.
+
+    According to the following rules:
+
+    The numeric string first digit should be "9".
+    At the end of the number string there are at least four "0".
+    It can also be a negative number(This means that the string may be started by "-", maybe not)
+Examples
+regex.test("90000") should return true
+regex.test("-90000") should return true
+regex.test("900000000") should return true
+regex.test("91230000") should return true
+regex.test("-91230000") should return true*/
+
+var regex=/^[-9].{0,}0000$/
+
+console.log(regex.test("-90000"))
 
