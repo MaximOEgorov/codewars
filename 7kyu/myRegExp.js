@@ -67,7 +67,7 @@ regex.test("900000000") should return true
 regex.test("91230000") should return true
 regex.test("-91230000") should return true*/
 
-var regex_=/^[-9].{0,}0000$/
+// var regex_=/^[-9].{0,}0000$/
 
 //console.log(regex.test("-90000"))
 
@@ -91,5 +91,7 @@ should return [ 'HTTP://CODEWARS.COM' ]
 should return [ 'https://www.codewars.com' ]
 "http://www.codewars.net".match(regex)*/
 
-var regex=/^(http:\/\/|https:\/\/)[a-z0-9.]{0,}(.com|.net)$/ig
+var regex=/(http:\/\/|https:\/\/)[a-z0-9.]{1,}(\.com|\.net)/ig
+
+// console.log(regex.test("HTTP://CODEWARS.COM".match(regex)))
 
