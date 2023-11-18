@@ -91,4 +91,5 @@ should return [ 'HTTP://CODEWARS.COM' ]
 should return [ 'https://www.codewars.com' ]
 "http://www.codewars.net".match(regex)*/
 
-var regex_=/^[-9].{0,}0000$/
+var regex=/^(http:\/\/|https:\/\/)[a-z0-9.]{0,}(.com|.net)$/ig
+
