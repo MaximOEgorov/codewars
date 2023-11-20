@@ -245,4 +245,22 @@ function maxMin(arr1,arr2){
     return [Math.max(...myArr), Math.min(...myArr)]
 }
 
-console.log(maxMin([1,3,5],[9,8,7]))
+// console.log(maxMin([1,3,5],[9,8,7]))
+
+/*
+Task
+Given an array of integers, your function bubblesortOnce/bubblesort_once/BubblesortOnce
+(or equivalent, depending on your language's naming conventions) should return
+a new array equivalent to performing exactly 1 complete pass on the original array.
+Your function should be pure, i.e. it should not mutate the input array.*/
+
+function bubblesortOnce(a) {
+    for (let i=1; i<a.length; i++) {
+        if (a[i] < a[i-1]) {
+            [a[i-1], a[i]] = [a[i], a[i-1]]
+        }
+    }
+    return a.slice()
+}
+
+console.log(bubblesortOnce([9, 7, 5, 3, 1, 2, 4, 6, 8]))
