@@ -207,3 +207,12 @@ tailAndHead([1,2,3,4,5]) should return 945
 tailAndHead([111,2345,66,78,900]) should return 7293
 tailAndHead([35456,782,569,2454,875]) should return 12012*/
 
+function tailAndHead(arr){
+    let newArr = []
+    for (let i=0; i<arr.length-1; i++) {
+        newArr.push( Number(String(arr[i + 1]).slice(0, 1)) + Number(String(arr[i]).slice(-1)))
+        }
+    return newArr.reduce((a,b)=>a*b)
+}
+
+console.log( tailAndHead([1,2,3,4,5] ))
