@@ -146,6 +146,31 @@ function alienLanguage(str){
         .join(" ")
 }
 
-console.log(alienLanguage("this is an example"))
+// console.log(alienLanguage("this is an example"))
 
+/*Move the first letter of each word to the end of it,
+then add "ay" to the end of the word.
+Leave punctuation marks untouched.
 
+Examples
+pigIt('Pig latin is cool'); // igPay atinlay siay oolcay
+pigIt('Hello world !');     // elloHay orldway !*/
+
+function pigIt(str) {
+    return str.replace(/\w+/g, (w) => {
+        return w.slice(1) + w[0] + 'ay';
+    });
+}
+function pigIt__(str){
+   return str.split(" ")
+       .map(x => {
+           if ((new RegExp(/\w+/)).test(x)) {
+               return x.substring(1,x.length) + x.substring(0,1) + "ay"
+           } else {
+               return x
+           }
+       })
+       .join(" ")
+}
+
+console.log(pigIt('Pig latin is cool'))
